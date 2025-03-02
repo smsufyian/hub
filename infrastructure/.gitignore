@@ -1,0 +1,21 @@
+# Pulumi files
+.pulumi/
+# Ignore sensitive stack configurations but keep main config files
+Pulumi.*.secret.yaml
+
+# Build output
+build/
+.gradle/
+
+# IDE files
+.idea/
+*.iml
+
+# Credentials
+credentials.json
+*.pem
+*.key
+
+# Local development
+local.yaml
+*.local.yaml

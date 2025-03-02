@@ -1,0 +1,6 @@
+config:
+  gcp:project: my-gcp-project-id
+  gcp:region: us-central1
+  # The following values need to be replaced with actual values
+  # gcp:organization: "YOUR_ORG_ID"
+  # gcp:billingAccount: "YOUR_BILLING_ACCOUNT"

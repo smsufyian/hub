@@ -12,3 +12,4 @@ plugins {
 
 rootProject.name = "hub"
 include("app")
+include("infrastructure")
