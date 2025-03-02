@@ -18,19 +18,29 @@ version = "1.0.0"
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
+    // Use JitPack for Flagsmith
+    maven { url = uri("https://jitpack.io") }
 }
 
- dependencies {
+dependencies {
     // Use the Kotlin JUnit 5 integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5:1.9.22")
 
     // Use the JUnit 5 integration.
     testImplementation(libs.junit.jupiter.engine)
 
+    // Kotlin coroutines support
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
     // This dependency is used by the application.
     implementation(libs.guava)
+
+    // Use the flagssmith feature toggle
+    implementation("com.flagsmith:flagsmith-kotlin-client:5.0.2")
+
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
